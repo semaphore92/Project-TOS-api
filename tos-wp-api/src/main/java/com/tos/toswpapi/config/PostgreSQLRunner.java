@@ -21,9 +21,5 @@ public class PostgreSQLRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        try(Connection connection = dataSource.getConnection()){
-            jdbcTemplate.execute("INSERT INTO public.test_member VALUES ('TEST')");
-        }
     }
 }
