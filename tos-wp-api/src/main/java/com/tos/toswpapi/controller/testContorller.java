@@ -11,14 +11,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("test")
+@RequestMapping("api")
 public class testContorller {
 
     @Autowired
     TestService testService;
 
-    @GetMapping(value="/{userId}",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<List<TestVo>> getTestInfo(@PathVariable("userId") String userId){
+    @GetMapping(value="/member/info/{userId}",produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<List<TestVo>> getMemberInfo(@PathVariable("userId") String userId){
+
+        System.out.println("getMemberInfo Start");
         List<TestVo> testList = testService.selectTestId(userId);
         return new ResponseEntity<List<TestVo>>(testList,HttpStatus.OK);
     }
