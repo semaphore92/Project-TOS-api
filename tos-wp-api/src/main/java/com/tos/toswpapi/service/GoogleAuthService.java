@@ -22,6 +22,7 @@ public class GoogleAuthService {
     private String googleClientId;
 
     public String GetAuthURL(){
+
         StringBuffer sb = new StringBuffer();
         sb.append(googleClientAuthEndpoint + "?");
         sb.append("scope=" + googleClienAuthScope + "&");
