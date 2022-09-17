@@ -1,4 +1,4 @@
-package com.tos.toswpapi.config;
+package com.tos.toswpapi.repository.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

@@ -1,7 +1,7 @@
 package com.tos.toswpapi.service;
 
-import com.tos.toswpapi.repository.TestRepositoty;
-import com.tos.toswpapi.vo.TestVo;
+import com.tos.toswpapi.repository.MemberRepositoty;
+import com.tos.toswpapi.vo.MemberVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,14 +13,13 @@ import java.util.Map;
 public class TestService {
 
     @Autowired
-    TestRepositoty testRepositoty;
+    MemberRepositoty memberRepositoty;
 
-    public List<TestVo> selectTestId(String id){
+    public List<MemberVo> selectTestId(String id){
 
-        List<TestVo> testList = new ArrayList<>();
-        testRepositoty.findAll().forEach(e -> testList.add(e));
+        List<MemberVo> testList = new ArrayList<>();
+        memberRepositoty.findAll().forEach(e -> testList.add(e));
 
         return testList;
     }
-
 }

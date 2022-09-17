@@ -18,6 +18,8 @@ dependencies {
     implementation 'com.h2database:h2:2.1.214'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.3'
     implementation 'org.postgresql:postgresql:42.4.2'
+    implementation 'io.freefair.lombok:io.freefair.lombok.gradle.plugin:6.5.1'
+    implementation 'org.projectlombok:lombok:1.18.24'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

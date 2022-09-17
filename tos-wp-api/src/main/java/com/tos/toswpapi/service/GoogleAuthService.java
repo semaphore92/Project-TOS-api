@@ -21,7 +21,7 @@ public class GoogleAuthService {
     @Value("${google.client.id}")
     private String googleClientId;
 
-    public String GetAuthURL(){
+    public String getAuthURL(){
 
         StringBuffer sb = new StringBuffer();
         sb.append(googleClientAuthEndpoint + "?");
@@ -29,13 +29,8 @@ public class GoogleAuthService {
         sb.append("include_granted_scopes=true&");
         sb.append("response_type=code&");
         sb.append("access_type=offline&");
-
-        //if(isRefreshToken)
-            sb.append("prompt=consent&");
-
+        sb.append("prompt=consent&");
         sb.append("state=member");
-        //if(StringUtils.hasText(tarEmail))
-          //  sb.append(":EMAIL_" + tarEmail);
 
         sb.append("&");
 
