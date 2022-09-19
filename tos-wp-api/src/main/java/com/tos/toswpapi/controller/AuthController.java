@@ -27,7 +27,6 @@ public class AuthController {
     ){
 
         System.out.println("googleLocalUrl Start");
-
         String url = googleAuthService.getAuthURL();
 
         Map<String,Object> resultMap = new HashMap<>();
