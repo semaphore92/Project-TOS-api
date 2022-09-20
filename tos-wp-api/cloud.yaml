@@ -1,0 +1,10 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: WAS tos 1
+    entrypoint: /bin/sh
+    args:
+      - '-c'
+      - |
+        set -x && \
+        gcloud compute ssh tos-was-prod --zone=asia-northeast3-a --tunnel-through-iap \
+        --command='sudo /bin/sh /service/tomcatBuild/buildAndDeploy.sh'
